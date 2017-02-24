@@ -83,12 +83,16 @@ def walk( rec, srcDrive, tgtDrive ):
                     xrefRec = mgNewRec( fltXref )
                     mgSetAttList( xrefRec, fltXrefFilename, item )
                     mgAppend( switchRec, xrefRec )
+                    print "adding xref:", item
 
-                mgSetSwitchBit( switchRec, 0, 0, MG_TRUE )
-                for idx, item in enumerate( items, start=1 ):
-                    mgAddSwitchMask( switchRec )
+                #mgSetSwitchBit( switchRec, 0, 0, MG_TRUE )
+                #print "switch mask/bit:", 0, "/", 0
+                for idx, item in enumerate( items ):
+                    if idx > 0:
+                        mgAddSwitchMask( switchRec )
+
                     mgSetSwitchBit( switchRec, idx, idx, MG_TRUE )
-                    print "switch mask/bit:", idx
+                    print "switch mask/bit:", idx, "/", idx
 
         code = mgGetCode( rec )
         if code == fltHeader:
