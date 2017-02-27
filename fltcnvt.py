@@ -1,8 +1,8 @@
 #
-# This software is Copyright © 2017 Regents of the University of California.
+# This software is Copyright 2017 Regents of the University of California.
 # All Rights Reserved.
 #
-# Created by Scott Friedman (friedman@idre.ucla.edu)
+# Created by Scott Friedman (friedman at idre.ucla.edu)
 # UCLA Office of Information Technology
 # Institute for Digital Research and Education
 #
