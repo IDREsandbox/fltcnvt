@@ -1,6 +1,17 @@
 # fltcnvt
 Convert Openflight linux files (paths) to windows
 
+## What does it do
+
+* Converts /home and /h to the source drive
+* Converts texture paths
+* Copies files to target drive preserving/creating directory hierarchy
+* Converts old style 'uSim' type switches to Creator switches
+* Converts XRefs
+* Recursively converts XRef'd files
+
+* Please report 'unknown code' output
+
 ## Install Instructions
 
 * Download the latest Python 2.7.x for Windows from:
@@ -70,19 +81,19 @@ Convert Openflight linux files (paths) to windows
 
 ## Example
 
-    ```
-    C:\Users\friedman\Documents\GitHub\fltcnvt>python fltcnvt.py U:\ucla\ucla.flt U: P:
-    I: OpenFlight API version 15.0.0.
-    I: Loading plugin <OpenFlight Data Dictionary> from <C:/Presagis/Suite15/OpenFlight_API/bin_x64/release/fltdata.dll>...
-    I: Site <FLTDATA> registered for plugin <OpenFlight Data Dictionary>.
-    I: Plugin <OpenFlight Data Dictionary> loaded.
-    I: File written <P:/mg/trees/olive.flt>.
-    I: File written <P:/mg/trees/olive3.flt>.
-    I: File written <P:/mg/trees/sycamore2.flt>.
-    .
-    .
-    .
-    ```
+```
+C:\Users\joesmith\fltcnvt>python fltcnvt.py U:\ucla\ucla.flt U: P:
+I: OpenFlight API version 15.0.0.
+I: Loading plugin <OpenFlight Data Dictionary> from <C:/Presagis/Suite15/OpenFlight_API/bin_x64/release/fltdata.dll>...
+I: Site <FLTDATA> registered for plugin <OpenFlight Data Dictionary>.
+I: Plugin <OpenFlight Data Dictionary> loaded.
+I: File written <P:/mg/trees/olive.flt>.
+I: File written <P:/mg/trees/olive3.flt>.
+I: File written <P:/mg/trees/sycamore2.flt>.
+.
+.
+.
+```
 
 ## Notes
 
