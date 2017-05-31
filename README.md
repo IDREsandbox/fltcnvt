@@ -21,8 +21,11 @@ Convert Openflight linux files (paths) to windows
     Enter the following exactly at the command prompt:
 
     ```
-    C:\Windows\system32>setx PYTHONPATH "%PRESAGIS_OPENFLIGHT_API%\bin_x64\release /M
+    C:\Windows\system32>setx PYTHONPATH "%PRESAGIS_OPENFLIGHT_API%\bin_x64\release
     
+    SUCCESS: Specified value was saved.
+    C:\Windows\system32>setx PRESAGIS_OPENFLIGHT_SCRIPT %PRESAGIS_OPENFLIGHT_API%\bin_x64\release
+        
     SUCCESS: Specified value was saved.
     ```
 
@@ -37,6 +40,9 @@ Convert Openflight linux files (paths) to windows
 
     ```
     C:\Windows\system32>echo %PYTHONPATH%
+    C:\Presagis\Suite15\OpenFlight_API\bin_x64\release
+    
+    C:\Windows\system32>echo %PRESAGIS_OPENFLIGHT_SCRIPT%
     C:\Presagis\Suite15\OpenFlight_API\bin_x64\release
     ```
 
@@ -59,3 +65,29 @@ Convert Openflight linux files (paths) to windows
     C:\Users\joesmith\fltcnvt>python fltcnvt.py
     usage: fltcnvt.py <openFlight.flt> sourceDrive targetDrive
     ```
+
+* All done
+
+## Example
+
+    ```
+    C:\Users\friedman\Documents\GitHub\fltcnvt>python fltcnvt.py U:\ucla\ucla.flt U: P:
+    I: OpenFlight API version 15.0.0.
+    I: Loading plugin <OpenFlight Data Dictionary> from <C:/Presagis/Suite15/OpenFlight_API/bin_x64/release/fltdata.dll>...
+    I: Site <FLTDATA> registered for plugin <OpenFlight Data Dictionary>.
+    I: Plugin <OpenFlight Data Dictionary> loaded.
+    I: File written <P:/mg/trees/olive.flt>.
+    I: File written <P:/mg/trees/olive3.flt>.
+    I: File written <P:/mg/trees/sycamore2.flt>.
+    .
+    .
+    .
+    ```
+
+## Notes
+
+* You must enter the full path to the `<openflight.flt>` source file
+
+* The `sourceDrv` and `targetDrv` are simply the drive designators, i.e. C:
+
+* Make sure you have enought disk space on the targetDrive
